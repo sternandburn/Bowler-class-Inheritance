@@ -1,0 +1,11 @@
+all:program
+program:Bowler.o JuniorBowler.o main.o
+	    g++ Bowler.o JuniorBowler.o main.o -o program
+Bowler.o: Bowler.cpp
+		  g++ -c Bowler.cpp
+JuniorBowler.o: JuniorBowler.cpp
+				g++ -c JuniorBowler.cpp
+main.o: main.cpp
+		g++ -c main.cpp
+clean:
+		rm -rf *.o program
